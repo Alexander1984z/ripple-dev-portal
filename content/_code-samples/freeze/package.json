@@ -5,12 +5,20 @@
   "dependencies": {
     "ripple-lib": "*",
     "babel-cli": "^6.0.0",
-    "babel-preset-es2015": "*"
+    "babel-preset-es2015": "*",
+    "snyk": "^1.230.5"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   },
   "devDependencies": {
     "eslint": "*"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
