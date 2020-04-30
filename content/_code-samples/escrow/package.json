@@ -4,7 +4,13 @@
   "license": "MIT",
   "dependencies": {
     "ripple-lib": "^0.17.6",
-    "five-bells-condition": "*"
+    "five-bells-condition": "*",
+    "snyk": "^1.316.1"
   },
-  "//": "Intended for Node.js version ?.? and higher"
+  "//": "Intended for Node.js version ?.? and higher",
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
