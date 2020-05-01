@@ -5,9 +5,15 @@
   "private": true,
   "//": "Change the license to something appropriate. You may want to use 'UNLICENSED' if you are just starting out.",
   "dependencies": {
-    "ripple-lib": "*"
+    "ripple-lib": "*",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "eslint": "*"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
